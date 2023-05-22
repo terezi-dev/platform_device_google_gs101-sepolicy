@@ -12,11 +12,6 @@ vndbinder_use(hal_bluetooth_btlinux)
 allow hal_bluetooth_btlinux hal_power_stats_vendor_service:service_manager find;
 binder_call(hal_bluetooth_btlinux, hal_power_stats_default)
 
-allow hal_bluetooth_btlinux sscoredump_vendor_data_crashinfo_file:dir create_dir_perms;
-allow hal_bluetooth_btlinux sscoredump_vendor_data_crashinfo_file:file create_file_perms;
-
 userdebug_or_eng(`
-  allow hal_bluetooth_btlinux sscoredump_vendor_data_coredump_file:dir create_dir_perms;
-  allow hal_bluetooth_btlinux sscoredump_vendor_data_coredump_file:file create_file_perms;
   allow hal_bluetooth_btlinux logbuffer_device:chr_file r_file_perms;
 ')

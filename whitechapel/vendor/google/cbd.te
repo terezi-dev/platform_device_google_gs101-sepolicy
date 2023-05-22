@@ -49,16 +49,9 @@ allow cbd modem_img_file:dir r_dir_perms;
 allow cbd modem_img_file:file r_file_perms;
 allow cbd modem_img_file:lnk_file r_file_perms;
 
-# Allow cbd to collect crash info
-allow cbd sscoredump_vendor_data_crashinfo_file:dir create_dir_perms;
-allow cbd sscoredump_vendor_data_crashinfo_file:file create_file_perms;
-
 userdebug_or_eng(`
   r_dir_file(cbd, vendor_slog_file)
 
   allow cbd kernel:system syslog_read;
-
-  allow cbd sscoredump_vendor_data_coredump_file:dir create_dir_perms;
-  allow cbd sscoredump_vendor_data_coredump_file:file create_file_perms;
 ')
 

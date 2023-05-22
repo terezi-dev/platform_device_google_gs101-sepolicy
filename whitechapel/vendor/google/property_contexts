@@ -8,13 +8,6 @@ vendor.ril.                      u:object_r:vendor_rild_prop:s0
 vendor.radio.                    u:object_r:vendor_rild_prop:s0
 ro.vendor.build.svn              u:object_r:vendor_rild_prop:s0
 
-# Ramdump
-persist.vendor.sys.crash_rcu    u:object_r:vendor_ramdump_prop:s0
-
-# SSR Detector
-vendor.debug.ssrdump.           u:object_r:vendor_ssrdump_prop:s0
-persist.vendor.sys.ssr.         u:object_r:vendor_ssrdump_prop:s0
-
 # Kernel modules related
 vendor.common.modules.ready     u:object_r:vendor_device_prop:s0
 vendor.device.modules.ready     u:object_r:vendor_device_prop:s0
